@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --f1-red: #E10600;
+    --f1-red-hover: #FF1801;
+    --f1-red-dark: #B30000;
+    --f1-carbon: #0A0A0C;
+    --f1-card-dark: #141418;
+    --f1-card-light: #FFFFFF;
+    --f1-border-dark: rgba(255, 255, 255, 0.08);
+    --f1-border-light: rgba(0, 0, 0, 0.1);
+  }
+
+  body {
+    font-family: 'Titillium Web', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+/* F1 Typography */
+.font-f1-title {
+  font-family: 'Anton', 'Titillium Web', 'Space Grotesk', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.font-f1-sans {
+  font-family: 'Titillium Web', 'Inter', sans-serif;
+}
+
+.font-mono-f1 {
+  font-family: 'JetBrains Mono', monospace;
+  font-feature-settings: 'tnum' on, 'zero' on;
+}
+
+.font-editorial {
+  font-family: 'Anton', 'Titillium Web', sans-serif;
+}
+
+.font-space {
+  font-family: 'Space Grotesk', 'Titillium Web', sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+/* F1 Classic Red & Carbon Accents */
+.f1-gradient-red {
+  background: linear-gradient(135deg, #E10600 0%, #B30000 100%);
+}
+
+.f1-gradient-carbon {
+  background: linear-gradient(180deg, #18181D 0%, #0D0D0F 100%);
+}
+
+.f1-border-red {
+  border-color: #E10600;
+}
+
+.f1-glow-red {
+  box-shadow: 0 0 15px rgba(225, 6, 0, 0.35);
+}
+
+.f1-glow-red-lg {
+  box-shadow: 0 0 25px rgba(225, 6, 0, 0.5);
+}
+
+/* Racing Chevrons & Angled Cuts */
+.clip-corner-f1 {
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+}
+
+.clip-corner-f1-bl {
+  clip-path: polygon(12px 0, 100% 0, 100% 100%, 0 100%, 0 12px);
+}
+
+.clip-corner-tr {
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+}
+
+.clip-tag-skew {
+  transform: skewX(-12deg);
+}
+
+.clip-tag-unskew {
+  transform: skewX(12deg);
+}
+
+/* Carbon Fiber subtle pattern */
+.bg-carbon-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 8px 8px;
+}
+
+.bg-carbon-light-pattern {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 8px 8px;
+}
+
+/* Telemetry Animations */
+.telemetry-line {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawLine 2.2s ease-out forwards;
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.blinking-dot {
+  animation: blink 1.4s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+.rpm-pulse {
+  animation: rpmFlash 0.4s ease-in-out infinite alternate;
+}
+
+@keyframes rpmFlash {
+  from { opacity: 0.8; }
+  to { opacity: 1; filter: drop-shadow(0 0 6px #E10600); }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+.material-symbols-outlined.filled-icon {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Refined F1 Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #0A0A0C;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #2A2A32;
+  border-radius: 3px;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #E10600;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4F4F6;
+}
+::-webkit-scrollbar-thumb {
+  background: #C4C4CC;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E10600;
+}

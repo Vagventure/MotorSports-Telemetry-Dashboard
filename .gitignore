@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+
+# Build output
+build/
+dist/
+server.js
+*.tsbuildinfo
+
+# Vite / tooling caches
+.vite/
+node_modules/.vite/
+.cache/
+coverage/
+
+# Environment — .env.example is the template that ships
+.env*
+!.env.example
+
+# Editor & IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local agent / assistant tooling
+.claude/
+assets/.aistudio/
+metadata.json
+
+# OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Scratch
+_tmpdata_/
+_chk/
+tmp/
+*.local
+
+# Local restore copies
+*.bak
