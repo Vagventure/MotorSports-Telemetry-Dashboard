@@ -76,13 +76,15 @@ export const DriverDetailModal: React.FC<DriverDetailModalProps> = ({
             {/* Info */}
             <div className="flex-1 text-center sm:text-left">
               <div className="flex items-center justify-center sm:justify-start gap-2 mb-1">
-                <div className="w-5 h-3.5 overflow-hidden rounded-[1px] border border-black/20">
-                  <img
-                    src={driver.flagUrl}
-                    alt={driver.country}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+                {driver.flagUrl && (
+                  <div className="w-5 h-3.5 overflow-hidden rounded-[1px] border border-black/20">
+                    <img
+                      src={driver.flagUrl}
+                      alt={driver.country}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )}
                 <span className="font-f1-sans text-xs uppercase font-bold text-[#888899] tracking-wider">
                   {driver.country}
                 </span>
@@ -140,7 +142,7 @@ export const DriverDetailModal: React.FC<DriverDetailModalProps> = ({
               : 'bg-[#F4F4F8] border-[#E2E2E8] text-[#555566]'
           }`}>
             {driver.bio ||
-              `${driver.firstName} ${driver.lastName} currently drives car #${driver.number} for ${driver.team} in the 2024 FIA Formula 1 World Championship, contending at the highest tier of international motorsport.`}
+              `${driver.firstName} ${driver.lastName} currently drives car #${driver.number} for ${driver.team} in the FIA Formula 1 World Championship, contending at the highest tier of international motorsport.`}
           </div>
         </div>
 
